@@ -9,7 +9,7 @@ returnMoney = parseFloat(returnMoney);
 //100$ - 50$ - 20$ - 10$ - 5$ - 1$ - 0.5$ - 0.1$ - 0.05$ - 0.01$
 var Cash = [100,50,20,10,5,1,0.5,0.05,0.01];
 console.log('-------------------Please Return this Below Notes to Customer-----------------');
-
+if(returnMoney > 0){
 if (returnMoney >= 100){
     var count100 = Math.floor((returnMoney/Cash[0]));
     returnMoney -= (parseFloat(count100*100)).toFixed(2);
@@ -64,6 +64,9 @@ if (returnMoney >= 0.01){
     returnMoney = returnMoney.toFixed(2);
     console.log('1C : '+parseInt(count1cent));
 }
-
+}
+else{
+    console.log('Not enough money paid by Customer');
+};
 
 
